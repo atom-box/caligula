@@ -8,7 +8,35 @@ Carbon, Hydrogen, Nitrogen, Oxygen, Sulfur, Phosphorous, Iron, Copper
 We have the stuff of life.
 Because everything else is just inorganic.
 As seen in 
-dogs, trees, cakes, beach balls, snowflakes
+d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s, trees, cakes, beach balls, snowflakes
 
 ### What's next
 
