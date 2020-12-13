@@ -16,7 +16,10 @@ class About
         $number = random_int(0, 100);
 
         return new Response(
-            '<html><body>Lucky number: '.$number.'</body></html>'
+            '<html><body>
+            <h1>About: </h1>
+            <p>Visitor: '.$number.'</p>
+            </body></html>'
         );
     }
 }
