@@ -21,26 +21,31 @@ class GiveRating extends AbstractController
      * @Route("/teaparty")
      */
 
+    
+        public function teaParty(): Response
+        {
+            $cake = 6; $tea = 8;
+            
+            $res = $this->makeHeading($cake, $tea);        
+            $res .= '<div style="color:#00a;border:5px solid #888;border-radius:6px;text-align:center;width:50%;height:17%;" ><h2>That party rates as </h2></div>';
+            return new Response($res);
+        }        
 
-
-    public function teaParty(): Response
-    {
-        $cake = 6; $tea = 8;
-        $res = '';
-        $res .= '<div style="border-left: 6px solid red;background-color: lightgrey;">
-        <h2>
-        At the tea party we rated the cake and tea ';
-        $res .= $cake;
-        $res .= " and ";
-        $res .= $tea;
-        $res .= ' respectively and respectfully
-        </h2>
-        </div>';
-        $res .= '<div style="color:yellow;background-color:blue;text-align:center;" ><h2>That party rates as </h2></div>';
-        return new Response($res);
-    }
+        private function makeHeading($a, $b): string {
+            $res = '';
+            $res .= '<div style="border-left: 6px solid red;background-color: lightgrey;width:50%;">
+            <h2>
+            At the tea party we rated the cake and tea ';
+            $res .= $a;
+            $res .= " and ";
+            $res .= $b;
+            $res .= '.
+            </h2>
+            </div>';
+            return $res;
+        }
+    
 }
-
-
+    
 // teaParty(3, 8) → 0
 // teaParty(20, 6) → 2
