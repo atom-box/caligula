@@ -26,7 +26,7 @@ class GiveRating extends AbstractController
         {
             $cake = 6; $tea = 8;
             
-            $res = $this->makeHeading($cake, $tea);        
+            $res = makeHeading($cake, $tea);        
             $res .= '<div style="color:#00a;border:5px solid #888;border-radius:6px;text-align:center;width:50%;height:17%;" ><h2>That party rates as </h2></div>';
             return new Response($res);
         }        
