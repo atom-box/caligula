@@ -12,22 +12,35 @@ class BestOf
      */
 
      public function inputTheList(){
-
          
          
          return new Response(
              '<html>
-             <body>
 
-            <p>&#129338;</p>
+             <style>
+             div.container4 {
+                height: 40em;
+                border: 2px solid red;
+                position: relative }
+                div.container4 p   { width: 60vw; min-width: 360px; text-align: center; margin: 5% auto; background-color: #FEEE33; }
+                div.container4 form   { width: 60vw; min-width: 360px; text-align: center; margin: 5% auto; background-color: #ccc; }
+             
+            </style>
+
+             <body>
+<div class=container4>
             <p style="font-size:48px">
              &#128466; End of the year Best-of lists &#128334;
 </p>
-             <form action="welcome.php" method="post">
-             Name: <input type="text" name="name"><br>
-             E-mail: <input type="text" name="email"><br>
-             <input type="submit">
-             </form>
+<form action="welcome.php" method="post">
+<input type="submit" value="Submit"><br>
+
+<textarea name="message" rows="10" cols="30">
+Paste your list here
+</textarea> 
+
+</form>
+</div>
              </body>
              </html>'
             );
