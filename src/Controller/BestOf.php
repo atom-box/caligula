@@ -31,11 +31,11 @@ class BestOf
                     <form method="post" action="">
                     <p>
                         <label for="name">Name:</label><br>
-                        <input name="user-name" id="user-name" type="submit" ></input>
+                        <input name="user-name" id="user-name" type="text" ></input>
                     </p>
                     <p>
                         <label for="category">Category:</label><br>
-                        <input name="category"  id="category"  type="submit" >
+                        <input name="category"  id="category"  type="text" >
                     </p>
                     <p>
                         <label for="user-submit-list">Your favorites:</label><br>
