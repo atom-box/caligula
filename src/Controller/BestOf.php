@@ -11,6 +11,41 @@ class BestOf
      * @Route("best-of")
      */
 
+
+
+/* next action:
+  _           _ _ _            
+ | |         (_) | |           
+ | |__  _   _ _| | |_          
+ | '_ \| | | | | | __|         
+ | |_) | |_| | | | |_          
+ |_.__/ \__,_|_|_|\__|         
+ (_)                           
+  _ _ __                       
+ | | '_ \                      
+ | | | | |                     
+ |_|_| |_| _ ____   _____ _ __ 
+ / __|/ _ \ '__\ \ / / _ \ '__|
+ \__ \  __/ |   \ V /  __/ |   
+ |___/\___|_|    \_/ \___|_|   
+  ( _ )                        
+  / _ \/\                      
+ | (_>  <                      
+  \___/\/____  _____  _  __    
+ |  ____/ __ \|  __ \| |/ /    
+ | |__ | |  | | |__) | ' /     
+ |  __|| |  | |  _  /|  <      
+ | |   | |__| | | \ \| . \     
+ |_|    \____/|_|  \_\_|\_\    
+                            
+https://www.php.net/manual/en/features.commandline.webserver.php
+https://webrewrite.com/start-php-built-web-server/
+https://www.startutorial.com/articles/view/fun-with-php-built-in-web-server
+
+*/
+
+
+
     public function inputTheList()
     {
         return new Response(
