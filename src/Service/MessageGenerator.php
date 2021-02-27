@@ -1,4 +1,4 @@
-?php
+<?php
 // src/Service/MessageGenerator.php
 namespace App\Service;
 
