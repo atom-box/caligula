@@ -17,3 +17,6 @@ class MessageGenerator
         return $messages[$index];
     }
 }
+
+$talker = new MessageGenerator();
+echo $talker->getHappyMessage()."\n:::::::\n";
