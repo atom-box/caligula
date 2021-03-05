@@ -1,10 +1,12 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-interface batWarmup{
+interface batWarmup
+{
     public function lessYak(string $s): string;
 }
 
@@ -13,60 +15,63 @@ class NutsAndBolts implements batWarmup
     /**
      * @Route("/simple")
      */
-    
+
     public function hydrogen()
     {
         $typical = [];
-        $typical = ["cow" ];
+        $typical = ["cow"];
         $typical[] = $this->nihl("bar");
         return new Response(
             "<h1>Blue $typical[0] Way (b/w)Lasagna for $typical[1]</h1>"
         );
     }
-    
-    public function nihl($a){
+
+    public function nihl($a)
+    {
         $b = $a;
         return $b;
-        
     }
-    
-    public function lessYak(string $rawString): string{
+
+    public function lessYak(string $rawString): string
+    {
         $improvedString = '';
         $pieces = [];
         $pattern = '/yak/i';
-        $pieces = preg_split($pattern, $rawString, -1); 
+        $pieces = preg_split($pattern, $rawString, -1);
         $improvedString = implode('', $pieces);
         return $improvedString;
     }
 
-    public function stringBits(string $rawString): string{
+    public function stringBits(string $rawString): string
+    {
         $outstring = '';
         $chars = str_split($rawString);
-        foreach($chars as $index => $char){
-            if (1 !== $index % 2){
+        foreach ($chars as $index => $char) {
+            if (1 !== $index % 2) {
                 $outstring .= $char;
             }
         }
         return $outstring;
     }
-    
-    public function fixTeen(int $n): int{
-        if(in_array($n, [13, 14, 17, 18, 19])){
+
+    public function fixTeen(int $n): int
+    {
+        if (in_array($n, [13, 14, 17, 18, 19])) {
             return 0;
         }
 
         return $n;
     }
 
-    public function noTeenSum(array $ints): int{
-        if(count($ints) === 0){
+    public function noTeenSum(array $ints): int
+    {
+        if (count($ints) === 0) {
             return 0;
         }
         $poppedInt = array_pop($ints);
-        echo(count($ints)."\n");
-        return fixTeen($poppedInt) + noTeenSum($ints);
+        // echo (count($ints) . "\n");
+        return $this->fixTeen($poppedInt) + $this->noTeenSum($ints);
     }
-
 }
 
 /*
@@ -81,16 +86,16 @@ Given 3 int values, a b c, return their sum. However, if any of the values is a 
 */
 
 $solver = new NutsAndBolts;
-echo $solver->lessYak("yakpak")."\n"; // "pak"
-echo $solver->lessYak("pakyak")."\n"; // "pak"
-echo $solver->lessYak("yak123ya")."\n"; // "123ya"
+echo $solver->lessYak("yakpak") . "\n"; // "pak"
+echo $solver->lessYak("pakyak") . "\n"; // "pak"
+echo $solver->lessYak("yak123ya") . "\n"; // "123ya"
 
 
-echo $solver->stringBits("Hello")."\n"; //"Hlo"
-echo $solver->stringBits("Hi")."\n"; //"H"
-echo $solver->stringBits("Heeololeo")."\n"; //"Hello"
+echo $solver->stringBits("Hello") . "\n"; //"Hlo"
+echo $solver->stringBits("Hi") . "\n"; //"H"
+echo $solver->stringBits("Heeololeo") . "\n"; //"Hello"
 
-
-echo $solver->noTeenSum([1, 2, 3]);// 6
-echo $solver->noTeenSum([2, 13, 1]);// 3
-echo $solver->noTeenSum([2, 1, 14]);// 3
+echo "NO TEEN SUM: \n";
+echo $solver->noTeenSum([1, 2, 3]) . "\n"; // 6
+echo $solver->noTeenSum([2, 13, 1]) . "\n"; // 3
+echo $solver->noTeenSum([2, 1, 14]) . "\n";// 3
