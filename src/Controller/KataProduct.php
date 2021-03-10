@@ -8,8 +8,8 @@ class KataProduct
     private int $productNumber;
     private float $cost;
     private float $price;
-    private bool $loseMoney;
-    private bool $bogoOn;
+    private bool $losingMoneyIsOkay;
+    private bool $bogoIsOn;
 
     public function __construct(float $cost, float $price, int $productNumber, array $mods = [])
     {
@@ -27,18 +27,24 @@ class KataProduct
     */
     public function setBogo(int $productNumber, int $bogoQuantA, int $bogoQuantB)
     {
-        if (stockValueIsNegative() && loseMoney === false){
-            $this->logger("Did not set: BOGO.")
-            $this->logger("Stock value cannot be negative unless loseMoney flag is True.")
+        if ($this->stockValueIsNegative() && $this->losingMoneyOkay === false) {
+            $this->logger("Did not set: BOGO.");
+            $this->logger("Stock value cannot be negative unless loseMoney flag is True.");
             return;
         }
         $this->mods['bogoQuantA'] = $bogoQuantA;
         $this->mods['bogoQuantB'] = $bogoQuantB;
     }
 
-    private function stockValueIsNegative(): bool {
+    private function stockValueIsNegative(): bool
+    {
         // todo some checks go here
         return false;
+    }
+
+    public function logger(string $sayThis): void
+    {
+        echo $sayThis;
     }
 }
 
