@@ -85,17 +85,13 @@ NOTEENSUM
 Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19 inclusive -- then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n) {"that takes in an int value and returns that value fixed for the teen rule. In this way, you avoid repeating the teen code 3 times (i.e. "decomposition"). Define the helper below and at the same indent level as the main noTeenSum().
 */
 
-$solver = new NutsAndBolts;
-echo $solver->lessYak("yakpak") . "\n"; // "pak"
-echo $solver->lessYak("pakyak") . "\n"; // "pak"
-echo $solver->lessYak("yak123ya") . "\n"; // "123ya"
+/*
+             ____        ______    _
+            / __ \      |  ____|  | |
+  _ __ ___ | |  | |_   _| |__   __| |
+ | '_ ` _ \| |  | \ \ / /  __| / _` |
+ | | | | | | |__| |\ V /| |___| (_| |
+ |_| |_| |_|\____/  \_/ |______\__,_|
+*/
 
-
-echo $solver->stringBits("Hello") . "\n"; //"Hlo"
-echo $solver->stringBits("Hi") . "\n"; //"H"
-echo $solver->stringBits("Heeololeo") . "\n"; //"Hello"
-
-echo "NO TEEN SUM: \n";
-echo $solver->noTeenSum([1, 2, 3]) . "\n"; // 6
-echo $solver->noTeenSum([2, 13, 1]) . "\n"; // 3
-echo $solver->noTeenSum([2, 1, 14]) . "\n";// 3
+// The output was moved to the NutsAndBoltsTest!
