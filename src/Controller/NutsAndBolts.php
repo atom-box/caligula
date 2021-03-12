@@ -72,7 +72,19 @@ class NutsAndBolts implements batWarmup
         // echo (count($ints) . "\n");
         return $this->fixTeen($poppedInt) + $this->noTeenSum($ints);
     }
+
+    public function rotateLeft3(array $numbers)
+    {
+        $tempNumber = array_shift($numbers);
+        array_push($numbers, $tempNumber);
+        return implode("-", $numbers);
+    }
 }
+
+$solver = new  NutsAndBolts([]);
+echo ($solver->rotateLeft3([1, 2, 3]) . "\n");
+echo ($solver->rotateLeft3([5, 9, 11]) . "\n");
+echo ($solver->rotateLeft3([0, 10, 40, 41]) . "\n");
 
 /*
 LESSYAK
@@ -83,6 +95,12 @@ Given a string, return a new string made of just the odd chars, so "Hello" yield
 
 NOTEENSUM
 Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19 inclusive -- then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n) {"that takes in an int value and returns that value fixed for the teen rule. In this way, you avoid repeating the teen code 3 times (i.e. "decomposition"). Define the helper below and at the same indent level as the main noTeenSum().
+
+    ROTATELEFT3
+    Given an array of ints length 3, return an
+    array with the elements "rotated left"
+    so {1, 2, 3} yields {2, 3, 1}.
+
 */
 
 /*
